@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {Link} from "react-router-dom";
 import logo from '../logo.jpg';
 import {FaAlignRight} from "react-icons/fa";
+import {FiMail} from "react-icons/fi";
+
 
 class Navbar extends Component {
     state={
@@ -18,9 +20,15 @@ class Navbar extends Component {
 
                         {/* For logo */}
                         <Link to="/">
-                            <img src={logo} alt="SheAssist Logo" />
+                            <img src={logo} alt="Joseph Larkai Logo" />
                         </Link>
 
+                        {/* For contact-me icon in mobile view */}
+                        <Link to="/contact" className="nav-btn-small-screen">
+                            <button type="button">
+                                <FiMail className="Nav-icon" />   
+                            </button>
+                        </Link>
 
                         {/* For menu icon in mobile view */}
                         <button type="button" className="nav-btn-small-screen" onClick={this.handleToggle}>
@@ -31,40 +39,19 @@ class Navbar extends Component {
                     {/* For nav menu */}
                     <ul className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}>
                         <li>
-                            <Link to="/AboutUs">
-                                <p>About Us.</p>                                    
-                            </Link>
+                            <Link to="/resume">Resume.</Link>
                         </li>
                         <li>
-                            <Link to="/Services">
-                                <p>Services.</p>
-                            </Link>
-                        </li>
-                        <li>
-                            <Link to="/contact">
-                                <p>Contact Us.</p>
-                            </Link>
+                            <Link to="/projects">Projects.</Link>
                         </li>
                     </ul>
 
                     {/* For contact me icon in nav-bar */}
-                    <div className="nav-icons-big-screen">
-                        <a href="https://sheassistgh.netlify.app/" className="nav-btn-big-screen">
-                            <button type="button">
-                                <i className="fas fa-cart-plus" />   
-                            </button>
-                        </a>
-                        <a href="https://sheassistgh.netlify.app/" className="nav-btn-big-screen">
-                            <button type="button">
-                                <i className="fas fa-cart-plus" />    
-                            </button>
-                        </a>
-                        <a href="https://sheassistgh.netlify.app/" className="nav-btn-big-screen">
-                            <button type="button Nav-icon">
-                                <i className="fas fa-cart-plus" />   
-                            </button>
-                        </a>
-                    </div>
+                    <Link to="/contact" className="nav-btn-big-screen">
+                        <button type="button">
+                            <FiMail className="Nav-icon" />   
+                        </button>
+                    </Link>
 
                 </div>
             </nav>

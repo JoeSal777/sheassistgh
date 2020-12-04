@@ -1,4 +1,7 @@
-.navbar {
+/* Since bootstrap has been employed, we have to use !important */
+/* to overide the default settings from bootstrap to 'body' */
+
+  .navbar {
     position: fixed;
     top: 0;
     left: 0 !important;
@@ -19,12 +22,12 @@
     border: none;
     cursor: pointer;
     outline: none;
-    color: var(--primaryColor);
+    color: var(--secondaryColor)
   }
   .nav-btn-small-screen button{
     background: transparent;
     border: none;
-    color: var(--primaryColor);
+    color: var(--secondaryColor);
     font-size: 1.2rem;
   }
   .nav-btn-small-screen button:focus {
@@ -35,9 +38,9 @@
   }
   button:focus {
     outline: none;
-    border:none;
+    border:none
   }
-  .nav-icons-big-screen{
+  .nav-btn-big-screen{
     display: none;
   }
   .nav-icon {
@@ -57,8 +60,8 @@
   .nav-links a {
     display: block;
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    color: var(--primaryColor);
+    padding: 1rem 1rem;
+    color: var(--secondaryColor);
     transition: var(--mainTransition);
     text-align: right;
     transition-duration: 1s;
@@ -70,23 +73,20 @@
   }
   
   .show-nav {
-    height: 150px;
+    height: 100px;
     background: transparent;
     transition-duration: 2s;
   }
   @media screen and (min-width: 768px) {
     .navbar{
-      padding: 0.5rem 0rem 0rem 0rem !important; 
+      padding: 0rem !important;
       width: auto !important;
-      height: auto;
+      height: 8vh;
       margin-left: 50px !important;
       margin-right: 50px !important;
     }
     .nav-btn-small-screen {
       display: none;
-    }
-    .nav-icons-big-screen{
-      display: flex;
     }
     .nav-btn-big-screen{
       display: inline-block;
@@ -95,15 +95,15 @@
       border: none;
       cursor: pointer;
       outline: none;
+  
+      
     }
     .nav-btn-big-screen button{
       background: transparent;
-      height: 100%;
       border: none;
       transition-duration: 1s ease;
-      color: var(--primaryColor);
-      font-size: 1.5rem;
-      opacity: 70%;
+      color: var(--secondaryColor);
+      font-size: 1.2rem;
   
       // for backward-movement animation thingy
       -webkit-transform: perspective(1px) translateZ(0);
@@ -116,9 +116,9 @@
       
     }
     .nav-btn-big-screen button:hover, .nav-btn-big-screen button:focus, .nav-btn-big-screen button:active{
-      color: var(--accentColor);
-      -webkit-transform: translateX(-2px);
-      transform: translateX(-2px);
+      color: var(--lightAccentColor);
+      -webkit-transform: translateX(-8px);
+      transform: translateX(-8px);
     }
     .nav-btn-big-screen button:focus {
       outline: none;
@@ -126,7 +126,7 @@
     .nav-center {
       max-width: auto;
       display: flex;
-      vertical-align: middle !important;
+      vertical-align: middle;
     }
     .nav-links {
       height: auto;
@@ -135,9 +135,9 @@
       margin: 0rem;
       font-size: 0.95em;
     }
-    .nav-links a p{
-      height: 100%;
+    .nav-links a {
       margin: 0 1rem;
-      padding: 0.5rem 0;  
+      padding: 0.5rem 0;
     }
   }
+  /* end of navbar */
