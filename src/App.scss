@@ -1,0 +1,56 @@
+/* This allows us to set our elements as variables */
+:root{
+  --primaryColor:#000000;
+  --secondaryColor:#cdc3ff;
+  --primaryBackgroud: #ffffff;
+  --accentColor: red;
+  --lightAccentColor: rgb(255, 49, 49);
+  --secondaryAccentColor: #990000;
+  --secondaryLightAccentColor: #252525;
+  --primaryTextColor: hsl(0, 0%, 13%);
+  --mainLight:#f3f3f3;
+  --mainDark:#19202A;
+  --primaryFont: 'Raleway', sans-serif;
+  --SecondaryFont: 'Amiri', serif;
+}
+
+
+@import "./styles/_navbar.scss";
+
+
+
+body{
+  font-family: var(--primaryFont) !important;
+  background: transparent;
+  color: var(--primaryColor) !important;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  overflow: auto;
+  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+/* No need to use !important here because .text-title is a self created class */
+/* and hasn't any presets from bootstrap the needs overiding*/
+/* Oswald and Permanent Marker were imported from google font hence in parenthesis */
+
+
+.text-subtitle{
+  font-family: var(--primaryColor) !important;
+  text-transform: capitalize;
+}
+
+
+.text-accent{
+  color: var(--accentColor);
+}
+
+.text-bright{
+  color: var(--lightAccentColor);
+}
