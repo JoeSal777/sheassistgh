@@ -8,10 +8,10 @@ import {FiMail} from "react-icons/fi";
 class Navbar extends Component {
     state={
         isOpen: false
-    }
+    };
     handleToggle = () =>{
-        this.setState({isOpen:!this.state.isOpen})
-    }
+        this.setState({isOpen:!this.state.isOpen});
+    };
     render() {
         return (
             <nav className="navbar">
@@ -37,7 +37,7 @@ class Navbar extends Component {
                     </div>
 
                     {/* For nav menu */}
-                    <ul className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}>
+                    <ul className={this.state.isOpen? "nav-links show-nav" : "nav-links"}>
                         <li>
                             <Link to="/resume">Resume.</Link>
                         </li>
